@@ -1,0 +1,48 @@
+.home_parallax_one{
+	background-image: url('../images/parallax1.jpg');
+}
+.home_parallax_two{
+	background-image: url('../images/parallax2.png');
+}
+.home_parallax_one, .home_parallax_two{
+	background-attachment: fixed;
+	min-height: 400px;
+	background-size: cover;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+.row{
+	background-color: #DDD;
+}
+video#bgvid { 
+    position: static;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+}
+.video-content{
+	overflow: hidden;
+}
+
+.content_users img{
+	width: 250px;
+	height: 250px;
+	margin: auto;
+	margin-top: 50px;
+}
+.hidden_scroll{
+	opacity: 0;
+}
+.visible_scroll{
+	opacity: 1;
+}
+.second_effect, .first_effect{
+	 -webkit-animation-duration: 1.5s !important;
+  	animation-duration: 1.5s !important;
+}

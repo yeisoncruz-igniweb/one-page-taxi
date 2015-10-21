@@ -14,10 +14,6 @@
             $('.navbar-nav').css('margin-bottom','0');
             $('.navbar-nav li').css('padding-bottom','1%');
             $('.navbar-fixed-top').css('background-color','#000').css('opacity','0.9');
-            if( $( window ).width() > 990 ){
-                calculate_heigh_list();
-            }else{
-            }
             if( $( window ).width() > 768 ){
                 $('#navbar').css('margin-top','-40px');
             }else{
@@ -37,4 +33,13 @@
             $('.social_head, .sub-icon ').css('top','');
         }
     });
-    
+    $(document).ready(function() {
+        $('.first_effect').addClass("hidden_scroll").viewportChecker({
+            classToAdd: 'visible_scroll animated bounceInUp',
+            offset: 100
+        });$('.second_effect').addClass("hidden_scroll").viewportChecker({
+            classToAdd: 'visible_scroll animated fadeInDown',
+            offset: 100
+        });
+        $('.video-content').css('height',$(window).height());
+    });
