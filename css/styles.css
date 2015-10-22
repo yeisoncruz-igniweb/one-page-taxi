@@ -46,3 +46,16 @@ video#bgvid {
 	 -webkit-animation-duration: 1.5s !important;
   	animation-duration: 1.5s !important;
 }
+.loading{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	background-color: #DDD;
+}
+.loading_child{
+	display: table;
+	width: 100%;
+	position: relative;
+}

@@ -42,4 +42,11 @@
             offset: 100
         });
         $('.video-content').css('height',$(window).height());
+
+        $('.home_parallax_one').parallax({
+            speed : 0.10
+        });
+        $('.home_parallax_two').parallax({
+            speed : 0.10
+        });
     });
