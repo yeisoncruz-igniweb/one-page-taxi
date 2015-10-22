@@ -17,7 +17,7 @@
   <script src="js/animation.gsap.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
   <link href="css/bootstrap.css" rel="stylesheet">
-  -<link href="css/mobile.css" rel="stylesheet">
+  <link href="css/mobile.css" rel="stylesheet">
   <link href="css/animate.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/pace.css" rel="stylesheet">
@@ -57,8 +57,8 @@
       </div>
       </div>
     </div>
-<img src="images/taxi_scroll.png" alt="" id="animate1" style="position:relative;">
-    <div class="row home_parallax_one">
+    <img src="images/taxi_scroll.png" alt="" id="animate1" style="position:relative;">
+    <div class="row home_parallax_one" >
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto esse quis harum similique blanditiis, tempora nobis aliquam exercitationem minus totam fugit rerum, ad ipsa nulla cupiditate quibusdam. Esse, quidem quasi.
     </div>
     
@@ -87,16 +87,19 @@
         setTimeout(function(){
             $('.pace.pace-inactive .pace-activity').fadeOut();
             $('.loading').addClass('animated rotateOut');
+            $('.rotateOut').remove();
+            $('header').css('opacity',1);
         },2000);
     });
     var controller = new ScrollMagic.Controller();
+   
     var tween = TweenMax.fromTo("#animate1", 1,
                   {left: -0},
-                  {left: 1500, repeat: -1, yoyo: false, ease: Circ.easeInOut}
+                  {left: 1500, repeat: -1, yoyo: true, ease: Circ.easeInOut, delay: 2, repeatDelay: 3 }
                 );
 
     // build scene
-    var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 800, offset: 100})
+    var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 600, offset: 100})
             .setTween(tween)
             .addIndicators({name: "loop"}) // add indicators (requires plugin)
             .addTo(controller);
