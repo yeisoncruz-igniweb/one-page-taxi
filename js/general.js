@@ -36,10 +36,19 @@
     $(document).ready(function() {
         $('.first_effect').addClass("hidden_scroll").viewportChecker({
             classToAdd: 'visible_scroll animated bounceInUp',
-            offset: 100
-        });$('.second_effect').addClass("hidden_scroll").viewportChecker({
+            offset: 200
+        });
+        $('.second_effect').addClass("hidden_scroll").viewportChecker({
             classToAdd: 'visible_scroll animated fadeInDown',
-            offset: 100
+            offset: 200
+        });
+        $('.effect2').addClass("hidden_scroll").viewportChecker({
+            classToAdd: 'visible_scroll animated flipInY',
+            offset: 300
+        });
+        $('.effect3').addClass("hidden_scroll").viewportChecker({
+            classToAdd: 'visible_scroll animated fadeInDown',
+            offset: 300
         });
         $('.video-content').css('height',$(window).height());
 
@@ -50,3 +59,11 @@
             speed : 0.10
         });
     });
+    function runEffect(effect,id) {
+          var options = {};
+          $( "#"+id ).effect( effect, options, 500, function(){
+            setTimeout(function(){
+              $( "#"+id ).removeAttr('style');
+            },2000)
+          } );
+    }

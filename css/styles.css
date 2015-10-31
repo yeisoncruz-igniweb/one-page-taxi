@@ -4,6 +4,12 @@ header{
 .home_parallax_one{
 	background-image: url('../images/parallax1.jpg');
 }
+#quote{
+  font-size:44px;
+  line-height:50px;
+  color:#dedede;
+}
+
 .home_parallax_two{
 	background-image: url('../images/parallax2.png');
 }
@@ -17,7 +23,7 @@ header{
 .row{
 	background-color: #DDD;
 }
-video#bgvid { 
+video#bgvid {
     position: static;
     top: 50%;
     left: 50%;
@@ -27,7 +33,7 @@ video#bgvid {
     height: auto;
     z-index: -100;
     background: url(polina.jpg) no-repeat;
-    background-size: cover; 
+    background-size: cover;
 }
 .video-content{
 	overflow: hidden;
